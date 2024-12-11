@@ -1,12 +1,18 @@
 <template>
-  <div>1111</div>
+  <div>
+    <VueMarkdown :content="msg" />
+  </div>
 </template>
 <script>
+import VueMarkdown from './lib/index.vue'
 export default {
   name: 'App',
+  components: {
+    VueMarkdown,
+  },
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: '### Hello, world! \n\n ## This is a test',
     }
   },
 }

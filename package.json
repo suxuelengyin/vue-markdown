@@ -1,15 +1,20 @@
 {
   "name": "@suxuewb/vue-markdown",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "",
-  "export": "./index.js",
+  "exports": "./dist/@suxuewb-vue-markdown.js",
+  "type": "module",
   "files": [
-    "lib/",
+    "dist/",
     "index.d.ts.map",
     "index.d.ts",
     "index.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "pub": "vite build && npm publish",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -29,5 +34,14 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "vite": "^6.0.3",
     "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "hast-util-to-jsx-runtime": "^2.3.2",
+    "html-url-attributes": "^3.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.3"
   }
 }
