@@ -1,6 +1,7 @@
 <template>
   <div>
     <VueMarkdown :content="msg" />
+    <button hover-class="button-hover" @click="test">sdsadas</button>
   </div>
 </template>
 <script>
@@ -14,6 +15,12 @@ export default {
     return {
       msg: '### Hello, world! \n\n ## This is a test',
     }
+  },
+  methods: {
+    test() {
+      console.log('test')
+      this.msg = '### Hello! \n\n ## This is a test'
+    },
   },
 }
 </script>
